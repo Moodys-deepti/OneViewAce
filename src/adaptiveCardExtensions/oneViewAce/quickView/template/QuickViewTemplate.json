@@ -1,0 +1,903 @@
+
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": 1,
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "OneView,",
+                          "horizontalAlignment": "Right"
+                          
+                          
+                      }
+                  ],
+                  "verticalContentAlignment": "Top"
+              },
+              {
+                  "type": "Column",
+                  "width": 3,
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "Simplifying your work",
+                          "wrap": true,
+                          "size": "Small",
+                          "horizontalAlignment": "Left"
+                      }
+                  ],
+                  "horizontalAlignment": "Left",
+                  "verticalContentAlignment": "Bottom"
+              }
+          ],
+          "spacing": "Medium",
+          "separator": true,
+          "style": "accent",
+          "bleed":true
+      },
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": 1,
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "My Actions",
+                          "wrap": true,
+                          "spacing": "None"
+                          
+                      }
+                  ],
+                  "spacing": "None"
+              }
+          ],
+          "spacing": "None"
+      },
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "${actionable_item} Approvals",
+                          "wrap": true,
+                          "style": "columnHeader"
+                      }
+                  ],
+                  "style": "emphasis",
+                  "bleed": true
+              }
+          ]
+      },
+      {
+          "type": "Container",
+          "$when": "${actionable_item == 0}",
+          "items": [
+              {
+                  "type": "TextBlock",
+                  "text": "You dont have any pending actions",
+                  "wrap": true,
+                  "weight": "Lighter",
+                  "isSubtle": true
+              }
+          ]
+      },
+          {
+              "type": "Container",
+              "$when": "${count(actionable_item_detail_snow)>0}",
+              "items":[
+                  {
+                      "type": "ColumnSet",
+                      "$data": "${actionable_item_detail_snow}",
+                      
+                          "columns": [
+                                            {
+                                              "type": "Column",
+                                              "items": [
+                                                  {
+                                                      "type": "Image",
+                                                      "url": "https://th.bing.com/th/id/R.0a6016dc3cdc6370116bf0a551f844d5?rik=vHtdSYZY3agBpg&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2560x1440%2f2560x1440-deep-pink-solid-color-background.jpg&ehk=lgUAjJZjmpptJxkQlIpbpkcAyyCqHy04QgOWYqiwEZ4%3d&risl=&pid=ImgRaw&r=0",
+                                                      "altText": "",
+                                                      "size": "Small"
+                                                  }
+                                              ],
+                                              "width": "1"
+                                          },
+                                          {
+                                              "type": "Column",
+                                              "items": [
+                                                  {
+                                                      "type": "TextBlock",
+                                                      "weight": "Bolder",
+                                                      "text": "${number}",
+                                                      "wrap": true
+                                                  },
+                                                  {
+                                                      "type": "TextBlock",
+                                                      "spacing": "None",
+                                                      "text": "SNOW",
+                                                      "isSubtle": true,
+                                                      "wrap": true
+                                                  }
+                                              ],
+                                              "width": "5"
+                                          },
+                                          {
+                                              "type": "Column",
+                                              "items": [
+                                                  {
+                                                      "type": "TextBlock",
+                                                      "weight": "Bolder",
+                                                      "text": "GoTo",
+                                                      "wrap": true
+                                                  }
+                                                  
+                                              ],
+                                              "width": "2",
+                                              "selectAction": {
+                                                  "type": "Action.OpenUrl",
+                                                  "title": "GoTo",
+                                                  "tooltip": "OneView",
+                                                  "url": "https://oneview.moodys.com"
+                                              },
+                                              "backgroundImage": {
+                                                  "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                                  "horizontalAlignment": "Center",
+                                                  "verticalAlignment": "Center"
+                                              }
+                                          }
+                                      ]
+                    
+      }]
+          }
+  ,
+  {
+      "type": "Container",
+      "$when": "${count(actionable_item_detail_coupa)>0}",
+      "items":[
+          {
+              "type": "ColumnSet",
+              "$data": "${actionable_item_detail_coupa}",
+                  "columns": [
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "Image",
+                                              "url": "https://th.bing.com/th/id/R.0a6016dc3cdc6370116bf0a551f844d5?rik=vHtdSYZY3agBpg&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2560x1440%2f2560x1440-deep-pink-solid-color-background.jpg&ehk=lgUAjJZjmpptJxkQlIpbpkcAyyCqHy04QgOWYqiwEZ4%3d&risl=&pid=ImgRaw&r=0",
+                                              "altText": "",
+                                              "size": "Small"
+                                          }
+                                      ],
+                                      "width": "1"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "${contract_id}",
+                                              "wrap": true
+                                          },
+                                          {
+                                              "type": "TextBlock",
+                                              "spacing": "None",
+                                              "text": "Coupa",
+                                              "isSubtle": true,
+                                              "wrap": true
+                                          }
+                                      ],
+                                      "width": "5"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "GoTo",
+                                              "wrap": true
+                                          }
+                                          
+                                      ],
+                                      "width": "2",
+                                      "selectAction": {
+                                          "type": "Action.OpenUrl",
+                                          "title": "GoTo",
+                                          "tooltip": "OneView",
+                                          "url": "https://oneview.moodys.com"
+                                      },
+                                      "backgroundImage": {
+                                          "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                          "horizontalAlignment": "Center",
+                                          "verticalAlignment": "Center"
+                                      }
+                                  }
+                              ]
+            
+}]
+  },
+  {
+      "type": "Container",
+      "$when": "${count(actionable_item_detail_idam)>0}",
+      "items":[
+          {
+              "type": "ColumnSet",
+              "$data": "${actionable_item_detail_idam}",
+                  "columns": [
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "Image",
+                                              "url": "https://th.bing.com/th/id/R.0a6016dc3cdc6370116bf0a551f844d5?rik=vHtdSYZY3agBpg&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2560x1440%2f2560x1440-deep-pink-solid-color-background.jpg&ehk=lgUAjJZjmpptJxkQlIpbpkcAyyCqHy04QgOWYqiwEZ4%3d&risl=&pid=ImgRaw&r=0",
+                                              "altText": "",
+                                              "size": "Small"
+                                          }
+                                      ],
+                                      "width": "1"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "${number}",
+                                              "wrap": true
+                                          },
+                                          {
+                                              "type": "TextBlock",
+                                              "spacing": "None",
+                                              "text": "IDAM",
+                                              "isSubtle": true,
+                                              "wrap": true
+                                          }
+                                      ],
+                                      "width": "5"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "GoTo",
+                                              "wrap": true
+                                          }
+                                          
+                                      ],
+                                      "width": "2",
+                                      "selectAction": {
+                                          "type": "Action.OpenUrl",
+                                          "title": "GoTo",
+                                          "tooltip": "OneView",
+                                          "url": "https://oneview.moodys.com"
+                                      },
+                                      "backgroundImage": {
+                                          "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                          "horizontalAlignment": "Center",
+                                          "verticalAlignment": "Center"
+                                      }
+                                  }
+                              ]
+            
+}]
+  },
+  {
+      "type": "Container",
+      "$when": "${count(actionable_item_detail_concur)>0}",
+      "items":[
+          {
+              "type": "ColumnSet",
+              "$data": "${actionable_item_detail_concur}",
+                  "columns": [
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "Image",
+                                              "url": "https://th.bing.com/th/id/R.0a6016dc3cdc6370116bf0a551f844d5?rik=vHtdSYZY3agBpg&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2560x1440%2f2560x1440-deep-pink-solid-color-background.jpg&ehk=lgUAjJZjmpptJxkQlIpbpkcAyyCqHy04QgOWYqiwEZ4%3d&risl=&pid=ImgRaw&r=0",
+                                              "altText": "",
+                                              "size": "Small"
+                                          }
+                                      ],
+                                      "width": "1"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "${Name}",
+                                              "wrap": true
+                                          },
+                                          {
+                                              "type": "TextBlock",
+                                              "spacing": "None",
+                                              "text": "Concur",
+                                              "isSubtle": true,
+                                              "wrap": true
+                                          }
+                                      ],
+                                      "width": "5"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "GoTo",
+                                              "wrap": true
+                                          }
+                                          
+                                      ],
+                                      "width": "2",
+                                      "selectAction": {
+                                          "type": "Action.OpenUrl",
+                                          "title": "GoTo",
+                                          "tooltip": "OneView",
+                                          "url": "https://oneview.moodys.com"
+                                      },
+                                      "backgroundImage": {
+                                          "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                          "horizontalAlignment": "Center",
+                                          "verticalAlignment": "Center"
+                                      }
+                                  }
+                              ]
+            
+}]
+  },
+  {
+      "type": "Container",
+      "$when": "${count(actionable_item_detail_SF)>0}",
+      "items":[
+          {
+              "type": "ColumnSet",
+              "$data": "${actionable_item_detail_SF}",
+                  "columns": [
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "Image",
+                                              "url": "https://th.bing.com/th/id/R.0a6016dc3cdc6370116bf0a551f844d5?rik=vHtdSYZY3agBpg&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2560x1440%2f2560x1440-deep-pink-solid-color-background.jpg&ehk=lgUAjJZjmpptJxkQlIpbpkcAyyCqHy04QgOWYqiwEZ4%3d&risl=&pid=ImgRaw&r=0",
+                                              "altText": "",
+                                              "size": "Small"
+                                          }
+                                      ],
+                                      "width": "1"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "${number}",
+                                              "wrap": true
+                                          },
+                                          {
+                                              "type": "TextBlock",
+                                              "spacing": "None",
+                                              "text": "Sales Force",
+                                              "isSubtle": true,
+                                              "wrap": true
+                                          }
+                                      ],
+                                      "width": "5"
+                                  },
+                                  {
+                                      "type": "Column",
+                                      "items": [
+                                          {
+                                              "type": "TextBlock",
+                                              "weight": "Bolder",
+                                              "text": "GoTo",
+                                              "wrap": true
+                                          }
+                                          
+                                      ],
+                                      "width": "2",
+                                      "selectAction": {
+                                          "type": "Action.OpenUrl",
+                                          "title": "GoTo",
+                                          "tooltip": "OneView",
+                                          "url": "https://oneview.moodys.com"
+                                      },
+                                      "backgroundImage": {
+                                          "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                          "horizontalAlignment": "Center",
+                                          "verticalAlignment": "Center"
+                                      }
+                                  }
+                              ]
+            
+}]
+  },
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "Trainings",
+                          "wrap": true,
+                          "style": "columnHeader"
+                      }
+                  ],
+                  "style": "emphasis",
+                  "bleed": true
+              }
+          ]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(trainings_detail) == 0}",
+          "items": [
+              {
+                  "type": "TextBlock",
+                  "text": "You are all catch up",
+                  "wrap": true,
+                  "weight": "Lighter",
+                  "isSubtle": true
+              }
+          ]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(trainings_detail)>0}",
+          "items":[
+              {
+                  "type": "ColumnSet",
+                  "$data": "${trainings_detail}",
+                      "columns": [
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "Image",
+                                                  "url": "https://www.solidbackgrounds.com/images/1920x1080/1920x1080-true-blue-solid-color-background.jpg",
+                                                  "altText": "",
+                                                  "size": "Small"
+                                              }
+                                          ],
+                                          "width": "1"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "${training_title}",
+                                                  "wrap": true
+                                              },
+                                              {
+                                                  "type": "TextBlock",
+                                                  "spacing": "None",
+                                                  "text": "${training_type}",
+                                                  "isSubtle": true,
+                                                  "wrap": true
+                                              }
+                                          ],
+                                          "width": "5"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "GoTo",
+                                                  "wrap": true
+                                              }
+                                              
+                                          ],
+                                          "width": "2",
+                                          "selectAction": {
+                                              "type": "Action.OpenUrl",
+                                              "title": "GoTo",
+                                              "tooltip": "OneView",
+                                              "url": "https://oneview.moodys.com"
+                                          },
+                                          "backgroundImage": {
+                                              "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                              "horizontalAlignment": "Center",
+                                              "verticalAlignment": "Center"
+                                          }
+                                      }
+                                  ]
+                
+  }]
+      },
+      {
+          "type": "ColumnSet",
+          "columns": [
+              {
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                      {
+                          "type": "TextBlock",
+                          "text": "Requests your tracking's",
+                          "wrap": true,
+                          "style": "columnHeader"
+                      }
+                  ],
+                  "style": "emphasis",
+                  "bleed": true
+              }
+          ]
+      },
+      {
+          "type": "Container",
+          "$when": "${tickets == 0}",
+          "items": [
+              {
+                  "type": "TextBlock",
+                  "text": "You have no open request",
+                  "wrap": true,
+                  "weight": "Lighter",
+                  "isSubtle": true
+              }
+          ]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(tickets_detail_snow)>0}",
+          "items":[
+              {
+                  "type": "ColumnSet",
+                  "$data": "${tickets_detail_snow}",
+                      "columns": [
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "Image",
+                                                  "url": "https://www.solidbackgrounds.com/images/1920x1080/1920x1080-true-blue-solid-color-background.jpg",
+                                                  "altText": "",
+                                                  "size": "Small"
+                                              }
+                                          ],
+                                          "width": "1"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "${number}",
+                                                  "wrap": true
+                                              },
+                                              {
+                                                  "type": "TextBlock",
+                                                  "spacing": "None",
+                                                  "text": "SNOW",
+                                                  "isSubtle": true,
+                                                  "wrap": true
+                                              }
+                                          ],
+                                          "width": "5"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "GoTo",
+                                                  "wrap": true
+                                              }
+                                              
+                                          ],
+                                          "width": "2",
+                                          "selectAction": {
+                                              "type": "Action.OpenUrl",
+                                              "title": "GoTo",
+                                              "tooltip": "OneView",
+                                              "url": "https://oneview.moodys.com"
+                                          },
+                                          "backgroundImage": {
+                                              "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                              "horizontalAlignment": "Center",
+                                              "verticalAlignment": "Center"
+                                          }
+                                      }
+                                  ]
+                
+  }]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(tickets_detail_idam)>0}",
+          "items":[
+              {
+                  "type": "ColumnSet",
+                  "$data": "${tickets_detail_idam}",
+                      "columns": [
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "Image",
+                                                  "url": "https://www.solidbackgrounds.com/images/1920x1080/1920x1080-true-blue-solid-color-background.jpg",
+                                                  "altText": "",
+                                                  "size": "Small"
+                                              }
+                                          ],
+                                          "width": "1"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "${number}",
+                                                  "wrap": true
+                                              },
+                                              {
+                                                  "type": "TextBlock",
+                                                  "spacing": "None",
+                                                  "text": "IDAM",
+                                                  "isSubtle": true,
+                                                  "wrap": true
+                                              }
+                                          ],
+                                          "width": "5"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "GoTo",
+                                                  "wrap": true
+                                              }
+                                              
+                                          ],
+                                          "width": "2",
+                                          "selectAction": {
+                                              "type": "Action.OpenUrl",
+                                              "title": "GoTo",
+                                              "tooltip": "OneView",
+                                              "url": "https://oneview.moodys.com"
+                                          },
+                                          "backgroundImage": {
+                                              "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                              "horizontalAlignment": "Center",
+                                              "verticalAlignment": "Center"
+                                          }
+                                      }
+                                  ]
+                
+  }]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(tickets_detail_SF)>0}",
+          "items":[
+              {
+                  "type": "ColumnSet",
+                  "$data": "${tickets_detail_SF}",
+                      "columns": [
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "Image",
+                                                  "url": "https://www.solidbackgrounds.com/images/1920x1080/1920x1080-true-blue-solid-color-background.jpg",
+                                                  "altText": "",
+                                                  "size": "Small"
+                                              }
+                                          ],
+                                          "width": "1"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "${number}",
+                                                  "wrap": true
+                                              },
+                                              {
+                                                  "type": "TextBlock",
+                                                  "spacing": "None",
+                                                  "text": "Sales Force",
+                                                  "isSubtle": true,
+                                                  "wrap": true
+                                              }
+                                          ],
+                                          "width": "5"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "GoTo",
+                                                  "wrap": true
+                                              }
+                                              
+                                          ],
+                                          "width": "2",
+                                          "selectAction": {
+                                              "type": "Action.OpenUrl",
+                                              "title": "GoTo",
+                                              "tooltip": "OneView",
+                                              "url": "https://oneview.moodys.com"
+                                          },
+                                          "backgroundImage": {
+                                              "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                              "horizontalAlignment": "Center",
+                                              "verticalAlignment": "Center"
+                                          }
+                                      }
+                                  ]
+                
+  }]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(tickets_detail_coupa)>0}",
+          "items":[
+              {
+                  "type": "ColumnSet",
+                  "$data": "${tickets_detail_coupa}",
+                      "columns": [
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "Image",
+                                                  "url": "https://www.solidbackgrounds.com/images/1920x1080/1920x1080-true-blue-solid-color-background.jpg",
+                                                  "altText": "",
+                                                  "size": "Small"
+                                              }
+                                          ],
+                                          "width": "1"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "${contract_id}",
+                                                  "wrap": true
+                                              },
+                                              {
+                                                  "type": "TextBlock",
+                                                  "spacing": "None",
+                                                  "text": "Coupa",
+                                                  "isSubtle": true,
+                                                  "wrap": true
+                                              }
+                                          ],
+                                          "width": "5"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "GoTo",
+                                                  "wrap": true
+                                              }
+                                              
+                                          ],
+                                          "width": "2",
+                                          "selectAction": {
+                                              "type": "Action.OpenUrl",
+                                              "title": "GoTo",
+                                              "tooltip": "OneView",
+                                              "url": "https://oneview.moodys.com"
+                                          },
+                                          "backgroundImage": {
+                                              "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                              "horizontalAlignment": "Center",
+                                              "verticalAlignment": "Center"
+                                          }
+                                      }
+                                  ]
+                
+  }]
+      },
+      {
+          "type": "Container",
+          "$when": "${count(tickets_detail_concur)>0}",
+          "items":[
+              {
+                  "type": "ColumnSet",
+                  "$data": "${tickets_detail_concur}",
+                      "columns": [
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "Image",
+                                                  "url": "https://www.solidbackgrounds.com/images/1920x1080/1920x1080-true-blue-solid-color-background.jpg",
+                                                  "altText": "",
+                                                  "size": "Small"
+                                              }
+                                          ],
+                                          "width": "1"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "${Name}",
+                                                  "wrap": true
+                                              },
+                                              {
+                                                  "type": "TextBlock",
+                                                  "spacing": "None",
+                                                  "text": "Concur",
+                                                  "isSubtle": true,
+                                                  "wrap": true
+                                              }
+                                          ],
+                                          "width": "5"
+                                      },
+                                      {
+                                          "type": "Column",
+                                          "items": [
+                                              {
+                                                  "type": "TextBlock",
+                                                  "weight": "Bolder",
+                                                  "text": "GoTo",
+                                                  "wrap": true
+                                              }
+                                              
+                                          ],
+                                          "width": "2",
+                                          "selectAction": {
+                                              "type": "Action.OpenUrl",
+                                              "title": "GoTo",
+                                              "tooltip": "OneView",
+                                              "url": "https://oneview.moodys.com"
+                                          },
+                                          "backgroundImage": {
+                                              "url": "https://th.bing.com/th/id/R.b9378c5b0b2f9c2a08341c5d4a6db23e?rik=wDs1jSi27w0NJQ&riu=http%3a%2f%2fwww.solidbackgrounds.com%2fimages%2f2880x1800%2f2880x1800-vivid-sky-blue-solid-color-background.jpg&ehk=bZSlLJDDC8Oi0drsVHH6bPDhLbREN6jV%2bgAq5f4r4mM%3d&risl=&pid=ImgRaw&r=0",
+                                              "horizontalAlignment": "Center",
+                                              "verticalAlignment": "Center"
+                                          }
+                                      }
+                                  ]
+                
+  }]
+      }
+  
+  ]
+  }
+

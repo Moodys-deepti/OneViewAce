@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "one-view-ace-client-side-solution",
+    "id": "25a084f4-fbf9-48a7-83bb-c109610b4e79",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [
+      {
+          "resource": "Microsoft Graph",
+          "scope": "User.Read.All"
+      }
+      ],
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "OneViewAce description"
+      },
+      "longDescription": {
+        "default": "OneViewAce description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "one-view-ace Feature",
+        "description": "The feature that activates elements of the one-view-ace solution.",
+        "id": "2a6bbdb4-0ae7-426b-8574-a47d4c795be1",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/one-view-ace.sppkg"
+  }
+}

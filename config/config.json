@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "one-view-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/oneViewAce/OneViewAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/oneViewAce/OneViewAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "OneViewAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/oneViewAce/loc/{locale}.js"
+  }
+}

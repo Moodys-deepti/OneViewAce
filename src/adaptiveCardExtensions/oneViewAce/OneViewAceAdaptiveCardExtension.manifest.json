@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "d0d28ab8-94e7-4c63-80e4-497f99a0f9e0",
+  "alias": "OneViewAceAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  
+  "version": "*",
+  "manifestVersion": 2,
+
+  
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", 
+    "group": { "default": "Dashboard" },
+    "title": { "default": "OneView" },
+    "description": { "default": "OneViewAce description" },
+    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20230308.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "properties": {
+      "title": "OneView"
+    },
+    "cardSize": "Large"
+  }]
+}
